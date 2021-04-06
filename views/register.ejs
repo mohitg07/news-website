@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration Form</title>
+
+    <!-- link of external css files -->
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="colorlib-regform-7/fonts/material-icon/css/material-design-iconic-font.min.css">
+    <!-- Main css -->
+    <link rel="stylesheet" href="colorlib-regform-7/css/style.css">
+
+    <!-- google font css -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <% if (!correctEmailFormat) { %>
+     <script>alert('Your email format is not correct');</script>
+  <% } %>
+
+  <% if (emailMatch) { %>
+     <script>alert('This email is already in use');</script>
+  <% } %>
+
+  <% if (!passwordMatch) { %>
+     <script>alert('Your passwords do not match');</script>
+  <% } %>
+
+    <div class="main register-body">
+
+        <!-- Registration form -->
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content register-content">
+                    <div class="signup-form">
+                        <h2 class="form-title reg-title">Register</h2>
+                        <form action="/register" method="POST" class="register-form" id="register-form">
+                            <div class="form-group">
+                                <label for="name"><i class="zmdi zmdi-account material-icons-name reg-icon"></i></label>
+                                <input type="text" name="name" class="reg-input" id="name" autocomplete="off" placeholder="Your Name"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="zmdi zmdi-email reg-icon"></i></label>
+                                <input type="email" name="email" class="reg-input" id="email" autocomplete="off" placeholder="Your Email"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="pass"><i class="zmdi zmdi-lock reg-icon"></i></label>
+                                <input type="password" name="pass" class="reg-input" id="pass" autocomplete="off" placeholder="Password"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="re-pass"><i class="zmdi zmdi-lock-outline reg-icon"></i></label>
+                                <input type="password" name="re_pass" class="reg-input" id="re_pass" autocomplete="off" placeholder="Repeat your password"/>
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="register" id="signup" class="form-submit reg-btn" value="Register"/>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="images/registration-img.png" alt="sign up image"></figure>
+                        <p class="link-para">Already a member?  <a href="/login" class="signup-image-link link">Login</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- source of external JS files-->
+    <script src="colorlib-regform-7/vendor/jquery/jquery.min.js"></script>
+    <script src="colorlib-regform-7/js/main.js"></script>
+</body>
+</html>

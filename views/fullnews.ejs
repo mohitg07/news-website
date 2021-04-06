@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- bootstrap css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+  <!-- google font css -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+  <!-- custom css -->
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/fullnewsStyle.css">
+  <link rel="stylesheet" href="../css/fullnewsResponsive.css">
+
+  <title>fullNews</title>
+</head>
+
+<body>
+  <!-- top-most bar,navbar,weather-div and contactUs is same as in news.ejs file -->
+
+  <header id="header">
+    <div class="edit">
+      <i class="fas fa-user-edit fa-2x edit-logo" id="edit-logo" title="Edit your preferences"></i>
+      <p class="username">Hi <%= username %></p>
+    </div>
+    <div class="container">
+      <div class="logo">
+        <img class="companyLogo" src="../images/icon.png" alt="error 404">
+        <h2 class="companyName">NewsNumber</h2>
+      </div>
+      <div class="logout">
+        <img class="logout_img" id="logout_img" title="Logout" src="../images/logout.png" alt="log-out">
+      </div>
+    </div>
+  </header>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+
+      <a class="general" href="/general" id="general">General</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/news" id="my-reads">My Reads</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/sports" id="sports">Sports</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/technology" id="technology">Technology</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/entertainment" id="entertainment">Entertainment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/science" id="science">Science</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/health" id="health">Health</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/business" id="business">Business</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="weather-div">
+      <h2 class="weather-title">WEATHER TODAY</h2>
+      <textarea hidden="hidden" id="api-key"><%= api %></textarea>
+      <input id="cityInput" type="text" placeholder="Your City Name" autocomplete="off" name="cityName">
+      <button id="city-submit">GO</button>
+
+      <div id="weather-response">
+
+      </div>
+      <div id="date-time">
+
+      </div>
+  </div>
+
+  <div class="contact-us">
+     <a href="mailto:mohitgupt07@gmail.com">
+        <i class="fas fa-comment-dots fa-2x mail-icon"></i>
+        <span class="tooltiptext">Contact Us</span>
+     </a>
+  </div>
+
+  <!-- here News is the object which is passed as parameter by app.js file -->
+  <!-- in order to write js code inside my ejs file, I have used <% %> - this tag -->
+  <div class="mainContainer">
+      <div class="source">
+         <%= News.source.name %>
+      </div>
+      <div class="news-title">
+          <%= News.title %>
+      </div>
+      <div class="news-desc">
+          <%= News.description %>
+      </div>
+      <hr>
+      <div class="mini-container">
+        <div class="small-logo">
+             <img src="../images/icon.png" alt="error 404">
+        </div>
+        <div class="author">
+            Written by <p class="author-name"><%= News.author %></p>
+        </div>
+        <div class="published-date">
+          <%= "PUBLISHED ON " + News.publishedAt.substring(0,10) + " " + News.publishedAt.substring(11,19)%>
+        </div>
+      </div>
+      <div class="news-img">
+        <!-- if API will not return any image then I will put default image from my side -->
+        <!-- that's why I have used "onerror" attribute here -->
+        <img class="image" src="<%= News.urlToImage %>" alt="error" onerror=this.src="../images/error.png">
+      </div>
+      <div class="news-content">
+          <%= News.content %>
+      </div>
+   </div>
+
+  <!-- js file of fontawesome website from where I have taken some icon images -->
+  <script src="https://kit.fontawesome.com/8a5c569243.js" crossorigin="anonymous"></script>
+
+  <!-- bootstrap javascript and jquery files -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+
+  <!-- my own js file -->
+  <!-- carefully write the path of Ajax.js file because at this time, I am inside /news/:newsTitle route -->
+  <script src="../javascripts/Ajax.js"></script>
+
+</body>
+
+</html>

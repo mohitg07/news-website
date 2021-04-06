@@ -1,0 +1,79 @@
+/* this css is only applied to my fullnews.ejs file */
+
+.mainContainer{
+  position: relative;
+  padding: 10px 15px;
+  width: 65%;
+  margin: 25px;
+  box-shadow: 0px 0px 3px 3px lightgrey;
+}
+
+.source{
+   font-family: 'Abril Fatface', cursive;
+   color: #00B1CD;
+   font-weight: 500;
+}
+
+.news-title{
+   font-family: 'Times New Roman', serif;
+   margin-top: 5px;
+   font-size: 21px;
+   font-weight: 900;
+   line-height: normal;
+}
+
+.news-desc{
+   margin-top: 5px;
+   font-size: large;
+   line-height: normal;
+}
+
+.mini-container{
+   position: relative;
+}
+
+.small-logo{
+   height: 50px;
+   width: 50px;
+   display: inline-block;
+   margin-bottom: 15px;
+}
+
+.small-logo img{
+   height: 70%;
+   width: 70%;
+   border-radius: 100%;
+}
+
+.author{
+    position: absolute;
+    top: -5px;
+    left: 45px;
+}
+
+.author-name{
+  color: #00B1CD;
+  display: inline;
+}
+
+.published-date{
+  color: #b4aeae;
+  position: absolute;
+  top: 20px;
+  left: 45px;
+}
+
+.news-img{
+   text-align: center;
+   margin-bottom: 25px;
+}
+
+.image{
+   width: 80%;
+}
+
+.news-content{
+   font-family: 'Times New Roman', serif;
+   font-size: large;
+   line-height: normal;
+}
