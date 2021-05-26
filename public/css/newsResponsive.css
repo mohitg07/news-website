@@ -1,0 +1,218 @@
+/* this css is only applied to add responsiveness to my news.ejs file */
+
+/* Note that here max-width must be written in DECREASING size so that all can be rendered as per the viewport sizes */
+
+@media screen and (max-width: 1150px) {
+  .weather-div{
+    text-align: center;
+  }
+
+  #cityInput{
+    margin-left: 0;
+    width: 125px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+   .temp{
+      font-size: 35px;
+   }
+
+   .day{
+     font-size: 19px;
+     margin-left: 5px;
+   }
+
+   .date{
+     font-size: 19px;
+     margin-right: 5px;
+   }
+}
+
+@media screen and (max-width: 825px) {
+  .news-title{
+    font-size: 21px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .weather-title{
+    padding: 10px 0;
+    margin: 0 15px;
+  }
+
+  .day{
+    font-size: 15px;
+  }
+
+  .date{
+    font-size: 15px;
+  }
+
+  .news-title{
+    font-size: 19px;
+  }
+
+  .news-img{
+    height: 140px;
+    width: 25%;
+  }
+
+  .published-date{
+    font-size: 15px;
+  }
+
+  .link-full-story{
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .username{
+    display: none;
+  }
+
+  .companyLogo{
+    height: 35px;
+  }
+
+  .logout_img{
+    height: 30px;
+  }
+
+  .news-title{
+    font-size: 18px;
+  }
+
+  .published-date{
+    font-size: 13px;
+  }
+
+  .link-full-story{
+    font-size: 13px;
+  }
+
+  .temp{
+     font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .weather-div{
+    display: none;
+  }
+
+  .mainContainer{
+    margin-top: 60px;
+    width: 91%;
+  }
+
+  .weather-btn{
+    display: block;
+  }
+
+  .weather-div{
+    width: 60%;
+    margin: 70px auto;
+    height: 360px;
+    right: 15%;
+    z-index: 1;
+  }
+
+  #weather-response{
+    margin: 45px 30px 10px 30px;
+  }
+
+  .day{
+    font-size: 20px;
+  }
+
+  .date{
+    font-size: 20px;
+  }
+
+  .contact-us{
+    z-index: 1;
+  }
+
+  .published-date{
+    font-size: 15px;
+  }
+
+  .link-full-story{
+    font-size: 15px;
+  }
+
+  .tooltiptext{
+     display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .companyName{
+    font-size: 25px;
+  }
+
+  .companyLogo{
+    height: 30px;
+    margin-bottom: 0px;
+  }
+
+  .edit{
+    margin: 15px 0 0 15px;
+  }
+
+  .published-date{
+     left: 10px;
+  }
+
+  .link-full-story{
+     right: 10px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .news-title{
+     font-weight: 600;
+  }
+
+  .published-date{
+    font-size: 13px;
+  }
+
+  .link-full-story{
+    font-size: 13px;
+  }
+
+  .news-img{
+    height: 100px;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+   .signin{
+      padding: 0;
+   }
+
+   .signin-btn{
+      font-size: 15px;
+   }
+
+   .mainContainer{
+     padding: 5px 10px;
+     margin: 60px auto;
+   }
+
+   .news-title{
+      font-size: 16px;
+   }
+
+   .published-date{
+     top: 210px;
+   }
+
+   .link-full-story{
+     top: 190px;
+   }
+}

@@ -1,0 +1,158 @@
+/* this css is only applied to add responsiveness to my fullnews.ejs file */
+
+/* Note that here max-width must be written in DECREASING size so that all can be rendered as per the viewport sizes */
+
+@media screen and (max-width: 1150px) {
+  .weather-div{
+    text-align: center;
+  }
+
+  #cityInput{
+    margin-left: 0;
+    width: 125px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+   .temp{
+      font-size: 35px;
+   }
+
+   .day{
+     font-size: 19px;
+     margin-left: 5px;
+   }
+
+   .date{
+     font-size: 19px;
+     margin-right: 5px;
+   }
+}
+
+@media screen and (max-width: 750px) {
+  .weather-title{
+    padding: 10px 0;
+    margin: 0 15px;
+  }
+
+  .day{
+    font-size: 15px;
+  }
+
+  .date{
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .username{
+    display: none;
+  }
+
+  .companyLogo{
+    height: 35px;
+  }
+
+  .logout_img{
+    height: 30px;
+  }
+
+  .temp{
+     font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .weather-div{
+    display: none;
+  }
+
+  .mainContainer{
+    width: 91%;
+    margin-top: 60px;
+  }
+
+  .weather-btn{
+    display: block;
+  }
+
+  .weather-div{
+    width: 60%;
+    margin: 70px auto;
+    height: 360px;
+    right: 15%;
+    z-index: 1;
+  }
+
+  .day{
+    font-size: 20px;
+  }
+
+  .date{
+    font-size: 20px;
+  }
+
+  .contact-us{
+    z-index: 1;
+  }
+
+  .tooltiptext{
+     display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .companyName{
+    font-size: 25px;
+  }
+
+  .companyLogo{
+    height: 30px;
+    margin-bottom: 0px;
+  }
+
+  .edit{
+    margin: 15px 0 0 15px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .mainContainer{
+     margin: 60px auto;
+  }
+}
+
+@media screen and (max-width: 400px) {
+   .signin{
+      padding: 0;
+   }
+
+   .signin-btn{
+      font-size: 15px;
+   }
+
+    .published-date{
+       font-size: 15px;
+       left: 40px;
+    }
+
+    .small-logo img{
+       height: 60%;
+       width: 60%;
+       border-radius: 100%;
+    }
+
+    .author{
+      left: 40px;
+    }
+
+    .mainContainer{
+      padding: 10px;
+    }
+}
+
+@media screen and (max-width: 350px){
+  .published-date{
+     font-size: 14px;
+  }
+}
