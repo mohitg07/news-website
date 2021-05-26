@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Form</title>
+
+    <!-- link of external css files -->
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="colorlib-regform-7/fonts/material-icon/css/material-design-iconic-font.min.css">
+    <!-- Main css -->
+    <link rel="stylesheet" href="colorlib-regform-7/css/style.css">
+
+    <!-- google font css -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+    <!-- curtom css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <% if(!loginRequest) { %>
+     <script>alert('Your credentials do not match!');</script>
+  <% } %>
+
+    <div class="main login-body">
+
+        <!-- Login  Form -->
+        <section class="sign-in">
+            <div class="container">
+                <div class="signin-content login-content">
+                    <div class="signin-image">
+                        <figure><img src="images/login-img.png" alt="sing up image"></figure>
+                        <p class="link-para">Not a member?  <a href="/register" class="signup-image-link link">Register</a></p>
+                    </div>
+
+                    <div class="signin-form">
+                        <h2 class="form-title login-title">Login</h2>
+                        <form action="/login" method="POST" class="register-form" id="login-form">
+                            <div class="form-group">
+                                <label for="email"><i class="zmdi zmdi-email login-icon"></i></label>
+                                <input type="email" name="email" class="login-input" id="email" autocomplete="off" placeholder="Your Email"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="your_pass"><i class="zmdi zmdi-lock login-icon"></i></label>
+                                <input type="password" name="your_pass" class="login-input" id="your_pass" autocomplete="off" placeholder="Password"/>
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signin" id="signin" class="form-submit login-btn" value="Log in"/>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- external JS file -->
+    <script src="colorlib-regform-7/vendor/jquery/jquery.min.js"></script>
+    <script src="colorlib-regform-7/js/main.js"></script>
+</body>
+</html>
