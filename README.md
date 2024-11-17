@@ -19,5 +19,3 @@ For the database part, I have used :
 2) Mongoose
 
 In this website, I am also working with API calls and Ajax calls
-
-Here is the Link of my website : https://newsnumber.herokuapp.com
